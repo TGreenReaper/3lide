@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="/icons/favicon.png">
+        <link rel="icon" type="image/x-icon" href="icons/favicon.png">
         <script src="script.js"></script>
         <title>Josh's jQuery IDE</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
+       
         <div id="ide-container">
-           
+          
             <div id="txt-title">
              <h2>Josh's JQuery IDE</h2>
+             <h3 id="using"> You are using: </h3>
+             </div>  
+             <div id="noti">
+          <p id="notif_txt"></p>
              </div>
              <button id="run"></button>
             <div id="txt-area">
-                <textarea id="txt"></textarea>
+                <textarea id="txt" placeholder="JQUERY Code Here, /help" spellcheck="false"></textarea>
             </div>
           
         </div>
+       
         <div class="output" id="output">
             <!DOCTYPE html>
             <html>

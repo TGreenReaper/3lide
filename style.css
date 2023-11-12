@@ -39,6 +39,15 @@ body,html {
     top:-5px;
 }
 
+#txt::placeholder {
+    color: rgb(71, 71, 248);
+
+}
+
+#txt:focus {
+    outline: none;
+}
+
 .output {
     background-color: white;
     width: 100%;
@@ -46,6 +55,8 @@ body,html {
     display: block;
     
 }
+
+
 
 .nav {
     height: 80px;
@@ -64,7 +75,7 @@ body,html {
   height:25px;width: 25px;
   border-radius: 100%;
   position: relative;
-  left: 18.5%;
+  left: 18.1%;
   top:-10px;
   background-color: rgb(80, 80, 241);
   border: none;
@@ -78,4 +89,47 @@ body,html {
     width: 100%;
     display: block;
     height: 100%;
+}
+
+
+#noti {
+    height:50px;width: 150px;
+    background-color: rgb(31, 30, 30);
+    position: relative;
+    top:-10%;
+    border-top:2px solid blue;border-bottom: 2px solid blue;
+    animation: noti .5s ;
+    display: none;
+    left:2%;
+    
+}
+
+#noti p {
+    font-size:15px;
+    text-align: center;
+    vertical-align: middle;
+    left:15%;
+    position: relative;
+    font-family: sans-serif , 'Robotto';
+    border-bottom: .5px solid blue;
+}
+
+@keyframes noti {
+    from {
+        opacity: .1;
+        width: 50px;
+        height: 10px;
+    }
+
+    to {
+        opacity: .8;
+        height: 25px;
+        width: 100px;
+    }
+
+    to {
+        opacity: 1;
+        height: 50px;
+        width: 150px;
+    }
 }
