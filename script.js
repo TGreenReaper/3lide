@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded"  , function(){
        scr.remove()
     } 
     else if(lang == "html"){
-     document.getElementById("out").src= "data:text/html;charset=utf-8," + encodeURI(document.getElementById("txt").value)
+    document.getElementById("output").innerHTML = document.getElementById("txt").value
     }
     else if(lang == "css"){
         var cs = document.createElement("style");
