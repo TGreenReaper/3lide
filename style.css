@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@200&display=swap');
 
 
+
+
 body,html {
     margin: 0;
     padding: 0;
@@ -46,14 +48,17 @@ body,html {
 
 #txt:focus {
     outline: none;
+    animation: txt_focus .5s forwards;
+
 }
+
 
 .output {
     background-color: white;
     width: 100%;
     height: 100%;
     display: block;
-    
+    border-top:5px solid blue;
 }
 
 
@@ -83,6 +88,9 @@ body,html {
 
 #run:hover {
     cursor: pointer;
+    background-color: blue;
+    filter: grayscale(100%);
+
 }
 
 #out {
@@ -93,14 +101,15 @@ body,html {
 
 
 #noti {
-    height:50px;width: 150px;
+    height:50px;width: 165px;
     background-color: rgb(31, 30, 30);
     position: relative;
     top:-10%;
     border-top:2px solid blue;border-bottom: 2px solid blue;
-    animation: noti .5s ;
+    animation: noti .5s forwards;
     display: none;
     left:2%;
+    margin: 0;
     
 }
 
@@ -130,6 +139,91 @@ body,html {
     to {
         opacity: 1;
         height: 50px;
-        width: 150px;
+        width: 145px;
     }
+}
+
+
+@keyframes btn_click {
+    from {
+     height:10px
+     }
+
+     to {
+        height:25px;
+        width: 25px;
+     }
+
+     to {
+        height: 50px;
+        width: 50px;
+     }
+
+     to {
+     }
+}
+
+@keyframes txt_focus {
+    from {
+        width:65%;
+        height: 200px;
+        margin-left: 18%;
+    }
+
+    to {
+        width:68%;
+        height:220px;
+        margin-left: 15%;
+    }
+
+    to {
+        width:75%;
+        height: 250px;
+        margin-left: 13.5%;
+    }
+}
+
+
+@keyframes ur_noti {
+    from {
+        height: 5px;width:10px;
+    }
+
+    to {
+        height:25px;width:50px;
+    }
+
+    to {
+        height:50px;width:85px;
+    }
+}
+
+#urnoti-txt {
+    height:50px;width: 85px;
+    background-color: rgb(31, 30, 30);
+    position: relative;
+    top:-10%;
+    border-top:2px solid yellow;border-bottom: 2px solid yellow;
+    animation: ur_noti .5s forwards;
+    display: none;
+    left:2%;
+    margin: 0;   
+}
+
+#urnoti-txt input {
+    position: relative;
+    top:-40%;
+    width:45px;
+    left:19%;
+    background-color: black;
+    border:.5px solid yellow;
+    color: yellow;
+}
+
+#urnoti-txt p {
+    color: yellow;
+    text-align: center;
+    font-size: 15px;
+    bottom:10%;
+    font-family: sans-serif , "Robotto";
 }
